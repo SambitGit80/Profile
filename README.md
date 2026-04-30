@@ -7,6 +7,7 @@ Static HTML/CSS portfolio site.
 1. Push this repo to GitHub (if it is not already).
 2. Go to [vercel.com](https://vercel.com) → sign in → **Add New…** → **Project** → **Import** your repository.
 3. **Configure Project**
+   - **Project Name:** must be **all lowercase** (e.g. `profile` or `sambit-portfolio`). Repo names like `Profile` are invalid until you change this field.
    - **Framework Preset:** **Other** (no framework).
    - **Root Directory:** `.` (leave default).
    - **Build Command:** leave **empty** (there is no build step).
