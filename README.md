@@ -24,15 +24,27 @@ Reference: [Deploying a static site on Vercel](https://vercel.com/docs/framework
 
 ---
 
-## Custom domain on Vercel
+## Custom domain on Vercel (e.g. `sambit.com`)
 
-1. Buy a domain from any registrar (Cloudflare, Namecheap, etc.).
-2. In Vercel: open the project → **Settings** → **Domains** → add your domain (apex `example.com` and/or `www.example.com`).
-3. Vercel shows the **exact DNS records** to create at your registrar (often a **CNAME** to `cname.vercel-dns.com` or **A** records for the apex). Add those records, wait for propagation, then confirm in the dashboard.
+You only get `something.vercel.app` until you attach a domain **you register** (check availability — short names like `sambit.com` are often already owned).
+
+1. **Buy `sambit.com`** (or another name) at a registrar: [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/), [Namecheap](https://www.namecheap.com/), etc. You need control of that domain’s **DNS**.
+
+2. **Vercel** → open project **`sambit-portfolio-three`** (or whatever your project is named) → **Settings** → **Domains** → **Add**:
+   - Add **`sambit.com`** (apex).
+   - Optionally add **`www.sambit.com`**; Vercel can redirect `www` ↔ apex in the Domains UI.
+
+3. **DNS at your registrar** — copy what Vercel shows after you add each hostname. Typical patterns:
+   - **Apex** (`sambit.com`): **A** records to Vercel’s IPs, or **ALIAS/ANAME** to `76.76.21.21` / the target Vercel displays (follow the live instructions in the dashboard).
+   - **`www`:** **CNAME** `www` → `cname.vercel-dns.com` or the exact hostname Vercel gives you.
+
+4. Wait for DNS to propagate (minutes to a few hours). When Vercel marks the domain **Valid**, turn on **Redirect** if you want only `https://sambit.com` (or only `www`) as the canonical URL.
+
+5. **`*.vercel.app` still works**; visitors can use either until you rely only on the custom domain.
 
 Docs: [Add a domain to a Vercel project](https://vercel.com/docs/concepts/projects/domains/add-a-domain).
 
-**Optional:** After the domain works, add per-page `<link rel="canonical" href="https://YOURDOMAIN/...">` in each HTML `<head>` for SEO.
+**SEO:** This repo already includes `<link rel="canonical" href="https://sambit.com/...">` on each page. If your real domain is different (e.g. `www.sambit.com` or `sambit.dev`), search-and-replace `https://sambit.com` in the HTML files to match.
 
 ---
 
