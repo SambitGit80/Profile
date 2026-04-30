@@ -1,21 +1,26 @@
 # Portfolio
 
-Static HTML/CSS portfolio site.
+Static HTML/CSS portfolio site. Source repo: [github.com/SambitGit80/Profile](https://github.com/SambitGit80/Profile).
 
-## Deploy on Vercel
+## Deploy this site on Vercel (from GitHub)
 
-1. Push this repo to GitHub (if it is not already).
-2. Go to [vercel.com](https://vercel.com) → sign in → **Add New…** → **Project** → **Import** your repository.
+1. **Connect GitHub to Vercel** (required once)  
+   If you see *“install the GitHub integration first”*: finish installing the **Vercel** GitHub App and grant access to **`SambitGit80/Profile`** (GitHub → **Settings** → **Applications** → **Installed GitHub Apps** → **Vercel** → **Configure** → repository access).
+
+2. Open [vercel.com/new](https://vercel.com/new) → **Import** → choose **`SambitGit80/Profile`** → branch **`main`**.
+
 3. **Configure Project**
-   - **Project Name:** must be **all lowercase** (e.g. `profile` or `sambit-portfolio`). Repo names like `Profile` are invalid until you change this field.
-   - **Framework Preset:** **Other** (no framework).
-   - **Root Directory:** `.` (leave default).
-   - **Build Command:** leave **empty** (there is no build step).
-   - **Output Directory:** leave **empty** so the repo root is served as static files.
+   - **Project Name:** **all lowercase** only (e.g. `sambit-portfolio`). This becomes your live URL: `https://<project-name>.vercel.app`
+   - **Framework Preset:** **Other**
+   - **Root Directory:** `.` (default)
+   - **Build Command:** **empty**
+   - **Output Directory:** **empty** (site files are at the repo root)
 
-4. Click **Deploy**. Vercel gives you a URL like `your-project.vercel.app`.
+4. Click **Deploy**. When it shows **Ready**, open **Overview** or visit **`https://<your-project-name>.vercel.app`** — the root `index.html` redirects visitors to `./home/`.
 
-Official overview: [Deploying a static site on Vercel](https://vercel.com/docs/frameworks/static).
+After the first deploy, every **`git push`** to `main` triggers a new production deployment automatically (if the project stayed connected to that repo).
+
+Reference: [Deploying a static site on Vercel](https://vercel.com/docs/frameworks/static).
 
 ---
 
