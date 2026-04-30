@@ -2,38 +2,34 @@
 
 Static HTML/CSS portfolio site.
 
-## Custom domain (live URL you own)
+## Deploy on Vercel
 
-You need a **domain name** from a registrar (e.g. [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/), Namecheap, Google Domains). Then point it at **GitHub Pages** and tell GitHub which hostname to use.
+1. Push this repo to GitHub (if it is not already).
+2. Go to [vercel.com](https://vercel.com) → sign in → **Add New…** → **Project** → **Import** your repository.
+3. **Configure Project**
+   - **Framework Preset:** **Other** (no framework).
+   - **Root Directory:** `.` (leave default).
+   - **Build Command:** leave **empty** (there is no build step).
+   - **Output Directory:** leave **empty** so the repo root is served as static files.
 
-### 1. GitHub (your repo)
+4. Click **Deploy**. Vercel gives you a URL like `your-project.vercel.app`.
 
-1. **Settings** → **Pages** → **Custom domain**
-2. Enter your hostname, e.g. `www.yourname.com` or `yourname.com` → **Save**  
-   GitHub may open a PR or suggest adding a `CNAME` file; if not, add a file named **`CNAME`** (no extension) in the **repository root** with **one line**: your exact hostname (e.g. `www.yourname.com`). No `https://`.
+Official overview: [Deploying a static site on Vercel](https://vercel.com/docs/frameworks/static).
 
-3. After DNS propagates and a certificate is issued, enable **Enforce HTTPS** on the same page.
+---
 
-Official reference: [Managing a custom domain for your GitHub Pages site](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
+## Custom domain on Vercel
 
-### 2. DNS at your registrar
+1. Buy a domain from any registrar (Cloudflare, Namecheap, etc.).
+2. In Vercel: open the project → **Settings** → **Domains** → add your domain (apex `example.com` and/or `www.example.com`).
+3. Vercel shows the **exact DNS records** to create at your registrar (often a **CNAME** to `cname.vercel-dns.com` or **A** records for the apex). Add those records, wait for propagation, then confirm in the dashboard.
 
-**Subdomain** (e.g. `www.yourname.com` or `portfolio.yourname.com`):
+Docs: [Add a domain to a Vercel project](https://vercel.com/docs/concepts/projects/domains/add-a-domain).
 
-| Type  | Name / host | Target / value        |
-|-------|----------------|------------------------|
-| CNAME | `www` (or your subdomain) | `SambitGit80.github.io` |
+**Optional:** After the domain works, add per-page `<link rel="canonical" href="https://YOURDOMAIN/...">` in each HTML `<head>` for SEO.
 
-**Apex** (`yourname.com` only, no `www`):
+---
 
-Add **four** `A` records for host `@` (or blank, depending on the provider):
+## Alternative: GitHub Pages
 
-`185.199.108.153` · `185.199.109.153` · `185.199.110.153` · `185.199.111.153`
-
-Optional IPv6: four `AAAA` records for `@` — see the same GitHub doc for the current `2606:50c0:…` values.
-
-If your DNS provider supports **ALIAS/ANAME** on the apex, you can point `@` to `SambitGit80.github.io` instead of using the fixed `A`/`AAAA` list.
-
-### 3. Optional: SEO canonicals
-
-After the domain is final, you can add per-page `<link rel="canonical" href="https://YOURDOMAIN/...">` in each HTML `<head>` so search engines prefer your custom URL.
+If you use GitHub Pages instead: **Settings** → **Pages** → branch `main`, folder `/`, optional **Custom domain** + root **`CNAME`** file. DNS for GitHub is different from Vercel — follow [GitHub’s custom domain guide](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site).
