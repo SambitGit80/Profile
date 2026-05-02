@@ -26,27 +26,27 @@ Reference: [Deploying a static site on Vercel](https://vercel.com/docs/framework
 
 ---
 
-## Custom domain on Vercel (e.g. `sambit.com`)
+## Custom domain on Vercel (e.g. `www.sambit.com`)
 
-You only get `something.vercel.app` until you attach a domain **you register** (check availability — short names like `sambit.com` are often already owned).
+You **cannot** turn `sambit-portfolio-three.vercel.app` into `www.sambit.com` by renaming. You **add** `www.sambit.com` on top; the `.vercel.app` URL can stay as a backup.
 
-1. **Buy `sambit.com`** (or another name) at a registrar: [Cloudflare Registrar](https://www.cloudflare.com/products/registrar/), [Namecheap](https://www.namecheap.com/), etc. You need control of that domain’s **DNS**.
+1. **Register `sambit.com`** (you need the apex to own `www`) at a registrar: [Cloudflare](https://www.cloudflare.com/products/registrar/), [Namecheap](https://www.namecheap.com/), etc., and control **DNS**.
 
-2. **Vercel** → open project **`sambit-portfolio-three`** (or whatever your project is named) → **Settings** → **Domains** → **Add**:
-   - Add **`sambit.com`** (apex).
-   - Optionally add **`www.sambit.com`**; Vercel can redirect `www` ↔ apex in the Domains UI.
+2. **Vercel** → your project (e.g. `sambit-portfolio-three`) → **Settings** → **Domains** → **Add**:
+   - Add **`www.sambit.com`** (what you want visitors to type).
+   - Optionally add **`sambit.com`** (apex) and set a **redirect** in the Domains UI so `https://sambit.com` → `https://www.sambit.com` (or the other way around).
 
-3. **DNS at your registrar** — copy what Vercel shows after you add each hostname. Typical patterns:
-   - **Apex** (`sambit.com`): **A** records to Vercel’s IPs, or **ALIAS/ANAME** to `76.76.21.21` / the target Vercel displays (follow the live instructions in the dashboard).
-   - **`www`:** **CNAME** `www` → `cname.vercel-dns.com` or the exact hostname Vercel gives you.
+3. **DNS at your registrar** — use the **exact** records Vercel shows after each add. Usually:
+   - **`www`:** **CNAME** for host `www` → value Vercel gives (often `cname.vercel-dns.com` or similar).
+   - **Apex** (`sambit.com`): **A** or **ALIAS** as Vercel lists.
 
-4. Wait for DNS to propagate (minutes to a few hours). When Vercel marks the domain **Valid**, turn on **Redirect** if you want only `https://sambit.com` (or only `www`) as the canonical URL.
+4. Wait until the domain shows **Valid** and HTTPS works. Then prefer sharing **`https://www.sambit.com`**.
 
-5. **`*.vercel.app` still works**; visitors can use either until you rely only on the custom domain.
+5. **`*.vercel.app`** still works; optional redirect from Vercel subdomain to your custom domain is configured in **Domains**, not in this repo.
 
 Docs: [Add a domain to a Vercel project](https://vercel.com/docs/concepts/projects/domains/add-a-domain).
 
-**SEO:** Root `index.html` uses `<link rel="canonical" href="https://sambit.com/">`. Subpaths redirect to `/#section` with the same canonical. If your real domain differs, replace `https://sambit.com` in the HTML files.
+**SEO:** Canonical in this repo is `https://www.sambit.com/`. If you use a different hostname, replace `https://www.sambit.com` in the HTML files.
 
 ---
 
