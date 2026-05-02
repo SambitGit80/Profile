@@ -11,10 +11,12 @@ Static HTML/CSS portfolio site: **one scrollable page** (`index.html`) with sect
 
 3. **Configure Project**
    - **Project Name:** **all lowercase** only (e.g. `sambit-portfolio`). This becomes your live URL: `https://<project-name>.vercel.app`
-   - **Framework Preset:** **Other**
-   - **Root Directory:** `.` (default)
-   - **Build Command:** **empty**
+   - **Framework Preset:** **Other** (not Next.js — this repo is static HTML only; `vercel.json` also sets `"framework": null` so Git deploys stay on **Other**.)
+   - **Root Directory:** `.` (default — must match where `index.html` lives)
+   - **Build Command:** **empty** (override on if needed, then clear the field)
    - **Output Directory:** **empty** (site files are at the repo root)
+
+   If the build says **“No Next.js version detected”**, the project was set to Next.js. Set Framework to **Other** as above, or rely on the committed **`vercel.json`** and redeploy.
 
 4. Click **Deploy**. When it shows **Ready**, open **Overview** or visit **`https://<your-project-name>.vercel.app`** — the site is one scrollable page at `/` (nav uses in-page anchors like `#about`). Old paths such as `/home/` redirect to the matching section.
 
