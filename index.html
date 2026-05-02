@@ -2,12 +2,287 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=home/index.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sambit Kumar Nayak</title>
-  <link rel="canonical" href="https://sambit.com/home/index.html" />
+  <title>Sambit Kumar Nayak — Sr. QA Automation Engineer</title>
+  <link rel="canonical" href="https://sambit.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
-<body style="margin:2rem;font-family:system-ui,sans-serif;background:#0a0e14;color:#c8d0d8">
-  <p>Redirecting to <a href="home/index.html" style="color:#39ff88">./home</a>…</p>
+<body>
+  <div class="boot-overlay" id="boot" aria-hidden="true">
+    <div>
+      <p class="boot-line"><span class="prompt">$</span> Initializing system...</p>
+      <p class="boot-line"><span class="ok">Loading modules... [OK]</span></p>
+      <p class="boot-line"><span class="ok">Starting services... [OK]</span></p>
+    </div>
+  </div>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="brand" href="#home"><span class="prompt">~/</span>sambit-nayak</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#home" data-nav="home">./home</a>
+        <a href="#about" data-nav="about">./about</a>
+        <a href="#skills" data-nav="skills">./skills</a>
+        <a href="#experience" data-nav="experience">./experience</a>
+        <a href="#services" data-nav="services">./services</a>
+        <a href="#contact" data-nav="contact">./contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap page-main">
+    <section id="home" class="page-section" aria-label="Home">
+      <p class="section-cmd"><span class="prompt">$</span> whoami</p>
+      <div class="panel">
+        <h1 class="hero-name">Sambit Kumar Nayak</h1>
+        <p class="hero-role">Sr. QA Automation Engineer <span class="muted">|</span> Ahmedabad – 380052</p>
+        <p class="hero-meta">
+          <a href="mailto:sambitn854@gmail.com">sambitn854@gmail.com</a>
+          <span class="muted"> | </span>
+          <a href="tel:+918093224128">+91-8093224128</a>
+        </p>
+        <p class="lead" style="margin-top:1rem">
+          QA automation engineer focused on web and mobile quality—Selenium, Appium, APIs, and CI/CD—with Agile delivery and measurable regression impact.
+        </p>
+        <div class="stats" aria-label="Highlights">
+          <div class="stat"><span class="stat-num">5+</span><span class="stat-label">Years experience</span></div>
+          <div class="stat"><span class="stat-num">85%</span><span class="stat-label">Automation coverage</span></div>
+          <div class="stat"><span class="stat-num">60%</span><span class="stat-label">Faster regression</span></div>
+          <div class="stat"><span class="stat-num">Agile</span><span class="stat-label">Scrum / Kanban</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn" href="#about">$ cat ./about</a>
+          <a class="btn btn-ghost" href="#contact">$ cat ./contact</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="page-section" aria-label="About">
+      <p class="section-cmd"><span class="prompt">$</span> cat about.md</p>
+      <div class="panel">
+        <h2 class="hash-title"># About</h2>
+        <p class="lead">
+          Highly motivated QA Automation Engineer with <strong>5 years</strong> of experience in web and mobile application testing.
+          Expertise in <strong>Selenium WebDriver</strong>, <strong>Appium</strong>, <strong>API testing</strong>, and automation framework development using <strong>Java</strong>.
+          Experienced in CI/CD pipelines (Jenkins), Docker environments, cloud testing (BrowserStack, LambdaTest), and AI-assisted testing tools.
+          Strong experience in Agile (Scrum/Kanban) environments and building scalable automation frameworks.
+        </p>
+        <p class="lead" style="margin-top:1rem;color:var(--muted);font-size:0.88rem">
+          Philosophy: automation should shorten feedback loops, protect users, and stay maintainable—direction, structure, and correctness come from solid test design, not from tools alone.
+        </p>
+      </div>
+
+      <p class="section-cmd"><span class="prompt">$</span> cat professional-summary.md</p>
+      <div class="panel">
+        <h2 class="hash-title"># Professional summary</h2>
+        <ul class="bullet-list">
+          <li>Automation and manual testing for web and mobile applications.</li>
+          <li>Selenium WebDriver and Appium mobile automation.</li>
+          <li>AI-assisted testing: testRigor, Maestro, KaneAI, Cursor AI, ChatGPT-5.4, Claude AI.</li>
+          <li>Agile (Scrum &amp; Kanban), SDLC, STLC, test planning.</li>
+          <li>API testing with Postman and REST Assured.</li>
+          <li>BDD (Cucumber), TestNG, Maven, hybrid frameworks.</li>
+          <li>Git, GitHub, GitLab CI.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="page-section" aria-label="Skills">
+      <p class="section-cmd"><span class="prompt">$</span> ls -la ./skills/</p>
+      <div class="panel">
+        <h2 class="hash-title"># Core competencies</h2>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">// Programming &amp; automation</h3>
+          <div class="skill-bar"><span class="skill-name">Core Java</span><div class="bar"><i style="width:92%"></i></div><span class="pct">92%</span></div>
+          <div class="skill-bar"><span class="skill-name">Selenium WebDriver</span><div class="bar"><i style="width:95%"></i></div><span class="pct">95%</span></div>
+          <div class="skill-bar"><span class="skill-name">Appium</span><div class="bar"><i style="width:90%"></i></div><span class="pct">90%</span></div>
+          <div class="skill-bar"><span class="skill-name">Postman &amp; REST Assured</span><div class="bar"><i style="width:88%"></i></div><span class="pct">88%</span></div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">// Frameworks &amp; practices</h3>
+          <div class="skill-bar"><span class="skill-name">POM / Hybrid / Data-driven</span><div class="bar"><i style="width:93%"></i></div><span class="pct">93%</span></div>
+          <div class="skill-bar"><span class="skill-name">BDD (Cucumber), TestNG, Maven</span><div class="bar"><i style="width:90%"></i></div><span class="pct">90%</span></div>
+          <div class="skill-bar"><span class="skill-name">Agile (Scrum / Kanban)</span><div class="bar"><i style="width:92%"></i></div><span class="pct">92%</span></div>
+        </div>
+
+        <div class="skill-group">
+          <h3 class="skill-group-title">// DevOps, cloud &amp; AI tools</h3>
+          <div class="skill-bar"><span class="skill-name">Docker, Jenkins, Git / GitHub / GitLab CI</span><div class="bar"><i style="width:85%"></i></div><span class="pct">85%</span></div>
+          <div class="skill-bar"><span class="skill-name">LambdaTest, BrowserStack</span><div class="bar"><i style="width:88%"></i></div><span class="pct">88%</span></div>
+          <div class="skill-bar"><span class="skill-name">testRigor, Maestro, KaneAI, Cursor, ChatGPT, Claude</span><div class="bar"><i style="width:82%"></i></div><span class="pct">82%</span></div>
+        </div>
+
+        <p class="muted" style="margin:0;font-size:0.78rem;line-height:1.65;border-top:1px dashed var(--border);padding-top:1rem">
+          <strong style="color:var(--text)">Also:</strong> JIRA, TestRail, Linear, ClickUp · Oracle 10g, SQL, MongoDB · Eclipse, Cursor, Xcode, Android Studio, VS Code · Android, iOS, Web
+        </p>
+      </div>
+    </section>
+
+    <section id="experience" class="page-section" aria-label="Experience">
+      <p class="section-cmd"><span class="prompt">$</span> git log --all --oneline</p>
+      <div class="panel">
+        <h2 class="hash-title"># Experience</h2>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Sr. QA Automation Engineer</h3>
+            <p class="job-dates">May 2025 – Present</p>
+          </div>
+          <p class="job-co">AMPV Media Pvt. Ltd.</p>
+          <p class="job-proj">Projects: BlueTees Golf, mirra.co (iOS &amp; Android)</p>
+          <ul class="bullet-list">
+            <li>Mobile automation framework with Appium for Android and iOS.</li>
+            <li>Scalable Selenium WebDriver frameworks in Java.</li>
+            <li>Jenkins CI/CD and Docker integration for test runs.</li>
+            <li>Cross-browser and cross-device testing on BrowserStack and LambdaTest.</li>
+            <li>~60% regression cycle reduction; automation coverage ~85%.</li>
+            <li>UAT support and collaboration with cross-functional Agile teams.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Appium</span><span class="tag">Selenium</span><span class="tag">Jenkins</span><span class="tag">Docker</span><span class="tag">BrowserStack</span><span class="tag">LambdaTest</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Automation Engineer</h3>
+            <p class="job-dates">Oct 2024 – May 2025</p>
+          </div>
+          <p class="job-co">Webskitters Technology Solutions Pvt. Ltd.</p>
+          <p class="job-proj">Project: BlueTees Golf (CRM &amp; mobile)</p>
+          <ul class="bullet-list">
+            <li>Hybrid automation framework with Selenium WebDriver and Java.</li>
+            <li>Data-driven testing with TestNG and Maven.</li>
+            <li>~40% efficiency gain via script optimization.</li>
+            <li>Agile Scrum and Kanban delivery.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Selenium</span><span class="tag">TestNG</span><span class="tag">Maven</span><span class="tag">Agile</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Automation Tester</h3>
+            <p class="job-dates">Mar 2024 – Oct 2024</p>
+          </div>
+          <p class="job-co">e-Celtic Consulting Services Pvt. Ltd.</p>
+          <p class="job-proj">Projects: Ginteja, Gibl.in (insurance web &amp; iOS)</p>
+          <ul class="bullet-list">
+            <li>Manual and automated tests for insurance CRM.</li>
+            <li>Selenium hybrid frameworks in Java.</li>
+            <li>Functional, regression, and API testing.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Selenium</span><span class="tag">Java</span><span class="tag">API</span>
+          </div>
+        </article>
+
+        <article class="job">
+          <div class="job-head">
+            <h3 class="job-title">Manual and Automation Tester</h3>
+            <p class="job-dates">Apr 2021 – Mar 2024</p>
+          </div>
+          <p class="job-co">Sysbig Technologies India Pvt. Ltd.</p>
+          <p class="job-proj">Projects: Bank of America, H-Metaro, DealsDray (banking, healthcare, e-commerce)</p>
+          <ul class="bullet-list">
+            <li>End-to-end manual testing: functional, regression, integration, UAT (healthcare CRM).</li>
+            <li>Selenium WebDriver + Java with Page Object Model (POM).</li>
+            <li>Regression automation; Postman API testing; cross-browser testing.</li>
+            <li>Test design, planning, and execution from requirements and user stories.</li>
+            <li>JIRA defect lifecycle; Agile (Scrum) ceremonies.</li>
+            <li>Test documentation and SQL-backed data validation.</li>
+          </ul>
+          <div class="tag-row">
+            <span class="tag">Selenium</span><span class="tag">POM</span><span class="tag">Postman</span><span class="tag">JIRA</span><span class="tag">SQL</span><span class="tag">Scrum</span>
+          </div>
+        </article>
+      </div>
+
+      <p class="section-cmd"><span class="prompt">$</span> cat education.txt</p>
+      <div class="panel">
+        <h2 class="hash-title"># Education</h2>
+        <p class="lead"><strong>B.Tech</strong> — Biju Patnaik University of Technology, Odisha</p>
+      </div>
+    </section>
+
+    <section id="services" class="page-section" aria-label="Services">
+      <p class="section-cmd"><span class="prompt">$</span> ./list-services.sh</p>
+      <div class="panel">
+        <h2 class="hash-title"># What I offer</h2>
+        <div class="service-grid">
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ◆ ]</span>
+            <h3>Test automation &amp; frameworks</h3>
+            <p>Design and build maintainable Selenium and Appium frameworks in Java—POM, hybrid, data-driven, and BDD with Cucumber, TestNG, and Maven.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ⇄ ]</span>
+            <h3>API &amp; integration testing</h3>
+            <p>REST API validation with Postman and REST Assured—status codes, contracts, payloads, and data integrity across services.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ▣ ]</span>
+            <h3>Mobile &amp; cross-browser QA</h3>
+            <p>Android and iOS coverage with Appium; web compatibility and device labs via BrowserStack and LambdaTest.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ⟳ ]</span>
+            <h3>CI/CD &amp; quality gates</h3>
+            <p>Wire automated suites into Jenkins pipelines and Dockerized environments so every merge gets fast, reliable feedback.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ⚑ ]</span>
+            <h3>Agile test leadership</h3>
+            <p>Test planning, regression strategy, UAT support, and collaboration in Scrum/Kanban teams with clear traceability.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-icon" aria-hidden="true">[ ✦ ]</span>
+            <h3>AI-assisted testing</h3>
+            <p>Leverage tools like testRigor, Maestro, KaneAI, Cursor, and LLMs to accelerate authoring, exploration, and triage—without skipping engineering rigor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="page-section" aria-label="Contact">
+      <p class="section-cmd"><span class="prompt">$</span> cat contact.json</p>
+      <div class="panel">
+        <h2 class="hash-title"># Get in touch</h2>
+        <pre class="json-block"><code>{
+  "name": "Sambit Kumar Nayak",
+  "email": "<a href="mailto:sambitn854@gmail.com">sambitn854@gmail.com</a>",
+  "phone": "<a href="tel:+918093224128">+91-8093224128</a>",
+  "role": "Sr. QA Automation Engineer",
+  "location": "Ahmedabad – 380052, India",
+  "availability": "Open for opportunities",
+  "response_time": "&lt; 24 hours"
+}</code></pre>
+        <p class="muted" style="margin:1rem 0 0;font-size:0.82rem">
+          <span class="prompt">$</span> echo "Prefer email for detailed project briefs."
+        </p>
+      </div>
+
+      <p class="section-cmd"><span class="prompt">$</span> cat declaration.txt</p>
+      <div class="panel">
+        <h2 class="hash-title"># Declaration</h2>
+        <p class="lead">I hereby declare that the information provided above is true to the best of my knowledge.</p>
+        <p style="margin:1rem 0 0.25rem"><strong>Sambit Kumar Nayak</strong></p>
+        <p class="muted" style="margin:0;font-size:0.82rem">Date: __________ &nbsp;|&nbsp; Place: Ahmedabad</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a href="#home"><span class="prompt">$</span> cd ~</a>
+  </footer>
+
+  <script src="assets/site.js"></script>
 </body>
 </html>

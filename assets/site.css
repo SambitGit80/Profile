@@ -19,6 +19,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.25rem;
 }
 
 body {
@@ -126,6 +127,18 @@ a:hover {
   max-width: 920px;
   margin: 0 auto;
   padding: 2rem 1rem 3rem;
+}
+
+.page-main {
+  padding-bottom: 4rem;
+}
+
+.page-section {
+  scroll-margin-top: 4.25rem;
+}
+
+.page-section + .page-section {
+  margin-top: 0.5rem;
 }
 
 .section-cmd {

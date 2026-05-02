@@ -1,6 +1,6 @@
 # Portfolio
 
-Static HTML/CSS portfolio site. Source repo: [github.com/SambitGit80/Profile](https://github.com/SambitGit80/Profile).
+Static HTML/CSS portfolio site: **one scrollable page** (`index.html`) with sections `#home` … `#contact`. Source repo: [github.com/SambitGit80/Profile](https://github.com/SambitGit80/Profile).
 
 ## Deploy this site on Vercel (from GitHub)
 
@@ -16,7 +16,7 @@ Static HTML/CSS portfolio site. Source repo: [github.com/SambitGit80/Profile](ht
    - **Build Command:** **empty**
    - **Output Directory:** **empty** (site files are at the repo root)
 
-4. Click **Deploy**. When it shows **Ready**, open **Overview** or visit **`https://<your-project-name>.vercel.app`** — the root `index.html` redirects visitors to `./home/`.
+4. Click **Deploy**. When it shows **Ready**, open **Overview** or visit **`https://<your-project-name>.vercel.app`** — the site is one scrollable page at `/` (nav uses in-page anchors like `#about`). Old paths such as `/home/` redirect to the matching section.
 
 After the first deploy, every **`git push`** to `main` triggers a new production deployment automatically (if the project stayed connected to that repo).
 
@@ -44,7 +44,7 @@ You only get `something.vercel.app` until you attach a domain **you register** (
 
 Docs: [Add a domain to a Vercel project](https://vercel.com/docs/concepts/projects/domains/add-a-domain).
 
-**SEO:** This repo already includes `<link rel="canonical" href="https://sambit.com/...">` on each page. If your real domain is different (e.g. `www.sambit.com` or `sambit.dev`), search-and-replace `https://sambit.com` in the HTML files to match.
+**SEO:** Root `index.html` uses `<link rel="canonical" href="https://sambit.com/">`. Subpaths redirect to `/#section` with the same canonical. If your real domain differs, replace `https://sambit.com` in the HTML files.
 
 ---
 
